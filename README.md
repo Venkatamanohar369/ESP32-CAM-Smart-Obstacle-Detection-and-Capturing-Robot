@@ -1,6 +1,8 @@
 # ESP32-CAM Autonomous Surveillance Robot
 
-![ESP32-CAM Autonomous Surveillance Robot](docs/images/esp32-cam-robot-project.jpg)
+> **Demo Video:** [Esp32 cam based obstacle detection and capturing robot](https://www.youtube.com/watch?v=9W-vfZcfwpw)
+
+[![Esp32 cam based obstacle detection and capturing robot](docs/images/esp32-cam-robot-project.jpg)](https://www.youtube.com/watch?v=9W-vfZcfwpw)
 
 A modular, dual-controller (**AI-Thinker ESP32-CAM + Arduino Nano**) autonomous surveillance and obstacle-avoiding robot featuring live browser MJPEG streaming, wireless motor control, PIR motion-triggered image capture, ultrasonic distance measurement, emergency obstacle braking, buzzer alerts, and Telegram Bot API photo notifications.
 
