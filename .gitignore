@@ -23,7 +23,6 @@ __pycache__/
 Thumbs.db
 *.swp
 *.swo
-.vscode/.browse.c_cpp.db*
-.vscode/ipch/
+.vscode/
 *.tmp
 *.log

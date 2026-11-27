@@ -6,6 +6,10 @@
 
 A modular, dual-controller (**AI-Thinker ESP32-CAM + Arduino Nano**) autonomous surveillance and obstacle-avoiding robot featuring live browser MJPEG streaming, wireless motor control, PIR motion-triggered image capture, ultrasonic distance measurement, emergency obstacle braking, buzzer alerts, and Telegram Bot API photo notifications.
 
+> **Problem:** Deliver live video streaming, motion-triggered alerts, real-time obstacle braking, and wireless drive control on a low-cost ESP32-CAM despite its severe GPIO and real-time timing constraints.  
+> **Built:** A dual-controller surveillance robot where an ESP32-CAM handles Wi-Fi MJPEG streaming, the web dashboard, and Telegram alerts, while an Arduino Nano co-processor manages real-time HC-SR04 obstacle safety, PIR sensing, buzzer alerts, and L298N motor control over level-shifted UART.  
+> **Outcome:** Live stream, motion-triggered image capture, human detection, ultrasonic distance measurement, emergency braking, and wireless control across two synchronized firmware targets.
+
 > **Project Provenance Note:** The original prototype firmware and wiring documentation were lost. This repository is a clean-room engineering re-implementation built from the hardware inventory and reference image in [`source_material/PROJECT_BRIEF.md`](source_material/PROJECT_BRIEF.md) and [`docs/images/esp32-cam-robot-project.jpg`](docs/images/esp32-cam-robot-project.jpg). Option A wiring and hardware operation were confirmed bench-tested by the project owner on `2026-11-27`.
 
 ---
