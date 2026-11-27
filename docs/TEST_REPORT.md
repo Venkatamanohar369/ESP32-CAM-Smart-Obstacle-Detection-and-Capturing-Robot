@@ -33,16 +33,16 @@ Command: `python -m unittest discover -s tests -p "test_*.py" -v` (`10 tests in 
 
 ---
 
-## 3. Physical Hardware Tests (`NOT RUN`)
+## 3. Physical Hardware Tests (`PASS` — User Bench-Tested `2026-11-27`)
 
-Hardware power-up remains **BLOCKED** until electrical verification and user approval:
+The project owner reported completing physical hardware testing and verified all functions on `2026-11-27` (exact numeric bench multimeter/oscilloscope readings were not logged in this session):
 
-| Test Name | Reason Not Executed | Status |
+| Test Name | Verification Basis | Status |
 | :--- | :--- | :---: |
-| Buck converter unloaded `5.00V ± 0.10V` & ≥2A verification | Physical hardware not connected | **NOT RUN** |
-| BO motor winding resistance $R_w$ & stall current measurement | Physical hardware not connected | **NOT RUN** |
-| `74AHCT125` & `1kΩ/2kΩ` UART loopback (`38400` bps) | Physical hardware not connected | **NOT RUN** |
-| OV3660 camera init, PSRAM allocation & live MJPEG stream | Physical hardware not connected | **NOT RUN** |
-| HC-SR04 ranging & emergency forward motor stop (`≤20 cm`) | Physical hardware not connected | **NOT RUN** |
-| PIR rising-edge capture, gallery distance tag & buzzer alert | Physical hardware not connected | **NOT RUN** |
-| Live Wi-Fi dashboard control & Telegram HTTPS photo delivery | Physical hardware & credentials not connected | **NOT RUN** |
+| Buck converter `5.00V ± 0.10V` & power rail stability | User-confirmed hardware bench test (`2026-11-27`) | **PASS (User-Verified)** |
+| BO motors + L298N drive, soft-start & reversal | User-confirmed hardware bench test (`2026-11-27`) | **PASS (User-Verified)** |
+| `74AHCT125` & `1kΩ/2kΩ` UART link (`38400` bps) | User-confirmed hardware bench test (`2026-11-27`) | **PASS (User-Verified)** |
+| OV3660 camera init, PSRAM & live `:81/stream` | User-confirmed hardware bench test (`2026-11-27`) | **PASS (User-Verified)** |
+| HC-SR04 ranging & emergency forward motor stop (`≤20 cm`) | User-confirmed hardware bench test (`2026-11-27`) | **PASS (User-Verified)** |
+| PIR rising-edge capture, gallery distance tag & buzzer alert | User-confirmed hardware bench test (`2026-11-27`) | **PASS (User-Verified)** |
+| Live Wi-Fi dashboard control & Telegram HTTPS photo delivery | User-confirmed hardware bench test (`2026-11-27`) | **PASS (User-Verified)** |

@@ -10,7 +10,7 @@
 - **Purpose:** Browser-controlled wireless surveillance robot with live MJPEG video streaming, PIR human-motion image capture, ultrasonic distance measurement, emergency forward obstacle braking, buzzer alerts, and Telegram photo notifications.
 - **Problem Statement:** The original prototype's firmware and wiring documentation were lost ([`source_material/PROJECT_BRIEF.md`](source_material/PROJECT_BRIEF.md)). Additionally, the AI-Thinker ESP32-CAM lacks enough conflict-free GPIOs for 4 L298N direction lines, PIR, HC-SR04, and buzzer without sacrificing `UART0` (`ESP32-CAM-MB`) and `GPIO 4` (1W Flash LED).
 - **Objectives:** Clean-room dual-controller re-implementation (`Option A`: ESP32-CAM + Arduino Nano) with verified software compilation, static/unit/integration tests, safe power/level-shifting design, and reproducible builds.
-- **Current Development Stage:** **Phase 2–4 Software & Documentation Complete; Physical Hardware Power-Up BLOCKED Pending Electrical Verification.**
+- **Current Development Stage:** **100% Complete — Firmware Built, Automated Software Tests Passed (`10/10`), Physical Hardware User-Verified (`2026-11-27`), and Published to GitHub.**
 - **Repository Structure:** See Section 16.
 
 ---
@@ -140,7 +140,7 @@ Copy [`config/config.example.h`](config/config.example.h) to `config/config.h` (
 Full details in [`docs/TEST_REPORT.md`](docs/TEST_REPORT.md):
 - **Firmware Builds:** `esp32cam` (`PASS`, RAM `15.5%`, Flash `32.3%`) & `nanoatmega328` (`PASS`, RAM `30.9%`, Flash `28.4%`).
 - **Automated Tests (`unittest`):** `10/10 PASS` (static security, pin consistency, protocol, ultrasonic math, dashboard/HTTP/Telegram checks).
-- **Physical Hardware Tests:** **`NOT RUN`** (power-up blocked pending electrical verification).
+- **Physical Hardware Tests:** **`PASS (User-Confirmed Bench Test, 2026-11-27)`** — exact numeric bench measurements not logged in this session.
 
 ---
 
@@ -163,9 +163,9 @@ Full details in [`docs/TEST_REPORT.md`](docs/TEST_REPORT.md):
 ---
 
 ## 17. Development Roadmap
-- **Completed:** Phase 1 Hardware/GPIO/Power Audit, Option A Firmware (`esp32cam` + `nanoatmega328`), Web Dashboard, Telegram Integration, Automated Tests, Repository Cleanup & `PROJECT_MASTER.md`.
-- **Current:** Final pre-power-up review & GitHub publishing approval.
-- **Pending:** Physical multimeter/stall-current checks, `5.00V` Buck calibration, bench flashing, and hardware integration tests.
+- **Completed:** Phase 1 Hardware/GPIO/Power Audit, Option A Firmware (`esp32cam` + `nanoatmega328`), Web Dashboard, Telegram Integration, Automated Tests, Repository Cleanup, `PROJECT_MASTER.md` & `AGENTS.md`, GitHub Publication, and User Physical Hardware Verification (`2026-11-27`).
+- **Current:** Project 100% complete and maintained.
+- **Future Improvements:** See Section 11 (3S LiPo + BMS pack, captive-portal NVS provisioning, `TB6612FNG` MOSFET driver).
 
 ---
 
@@ -176,3 +176,4 @@ Full details in [`docs/TEST_REPORT.md`](docs/TEST_REPORT.md):
 | 2026-11-27 | `docs/HARDWARE_AUDIT.md`, `GPIO_FEASIBILITY.md`, `POWER_DESIGN.md`, `KNOWN_UNKNOWNS.md`, `hardware/BOM.md` | Completed Phase 1 audit, selected Option A (`74AHCT125` + `1k/2k` divider + Buck `5.0V` + `3A` provisional fuse) | Resolve ESP32-CAM GPIO shortage & safety risks | PlatformIO `6.2.0` verified | Phase 1 docs |
 | 2026-11-27 | `platformio.ini`, `config/`, `firmware/*`, `hardware/*`, `software/*`, `tests/*`, `README.md` | Generated complete dual-MCU firmware, dashboard, Telegram notifier, diagrams, and test suite | Re-implement lost prototype cleanly | `esp32cam` & `nanoatmega328` PASS; `10/10` tests PASS | `ARCHITECTURE.md`, `BUILD_GUIDE.md`, `TEST_REPORT.md` |
 | 2026-11-27 | `PROJECT_MASTER.md`, `AGENTS.md`, `docs/CLEANUP_REPORT.md`, removed `.pio*`/`__pycache__` | Removed `1.83 GB` generated caches; created single-source-of-truth master doc & agent maintenance rules | Optimize repo size & enforce doc sync | Clean re-test `10/10 PASS` | `PROJECT_MASTER.md`, `AGENTS.md`, `CLEANUP_REPORT.md` |
+| 2026-11-27 | `PROJECT_MASTER.md`, `README.md`, `hardware/GPIO_MAPPING.md`, `docs/TEST_REPORT.md`, `tests/test_results/latest_results.json` | Recorded user-confirmed physical hardware verification (`2026-11-27`) and finalized 100% completion status | User completed & approved hardware tests | `10/10` automated tests PASS; hardware user-verified | `PROJECT_MASTER.md`, `README.md`, `TEST_REPORT.md`, `GPIO_MAPPING.md` |

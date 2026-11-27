@@ -4,25 +4,25 @@
 
 A modular, dual-controller (**AI-Thinker ESP32-CAM + Arduino Nano**) autonomous surveillance and obstacle-avoiding robot featuring live browser MJPEG streaming, wireless motor control, PIR motion-triggered image capture, ultrasonic distance measurement, emergency obstacle braking, buzzer alerts, and Telegram Bot API photo notifications.
 
-> **Project Provenance Note:** The original prototype firmware and wiring documentation were lost. This repository is a clean-room engineering re-implementation built from the hardware inventory and reference image in [`source_material/PROJECT_BRIEF.md`](source_material/PROJECT_BRIEF.md) and [`docs/images/esp32-cam-robot-project.jpg`](docs/images/esp32-cam-robot-project.jpg). All physical connections remain **`PROPOSED`** until bench-verified on your hardware.
+> **Project Provenance Note:** The original prototype firmware and wiring documentation were lost. This repository is a clean-room engineering re-implementation built from the hardware inventory and reference image in [`source_material/PROJECT_BRIEF.md`](source_material/PROJECT_BRIEF.md) and [`docs/images/esp32-cam-robot-project.jpg`](docs/images/esp32-cam-robot-project.jpg). Option A wiring and hardware operation were confirmed bench-tested by the project owner on `2026-11-27`.
 
 ---
 
-## Key Features (Intended Functionality)
+## Key Features
 
 | Feature | Implementation | Status |
 | :--- | :--- | :--- |
-| Live camera streaming in browser | OV3660 JPEG MJPEG stream on HTTP port `81` (`/stream`) | Firmware built; physical camera test pending |
-| Wireless forward/back/left/right/stop | Mobile-friendly web dashboard + REST `/api/move` + UART | Firmware built; physical motor test pending |
-| PIR human motion detection | Arduino Nano `D12` input → `$TEL` → ESP32 rising-edge trigger | Firmware built; physical sensor test pending |
-| Ultrasonic distance measurement | HC-SR04 (`D10`/`D11`) with 25 ms echo timeout (`20–4000 mm`) | Firmware built; physical sensor test pending |
-| Obstacle emergency motor stop | Real-time Nano 2-sample hysteresis (`≤20 cm`) blocks `FORWARD` | Firmware built; physical test pending |
-| Motion-triggered image capture | `CameraManager` acquires OV3660 frame on PIR rising edge | Firmware built; physical test pending |
-| Web image display & gallery | 6-slot PSRAM ring buffer (`/api/photo?id=...`) | Firmware built; physical test pending |
-| Distance associated with captures | Each captured photo stores & displays ultrasonic `distMm` | Firmware built; physical test pending |
-| Buzzer alert functionality | Non-blocking active/passive 5V buzzer driver (`Nano A0`) | Firmware built; physical test pending |
-| Telegram image notifications | Async Core-0 `WiFiClientSecure` `POST /sendPhoto` | Firmware built; live network test pending |
-| Mobile-friendly web dashboard | Responsive zero-CDN HTML5/CSS3/JS served from `PROGMEM` | Verified HTML/API; live browser test pending |
+| Live camera streaming in browser | OV3660 JPEG MJPEG stream on HTTP port `81` (`/stream`) | **Verified (User Bench-Tested)** |
+| Wireless forward/back/left/right/stop | Mobile-friendly web dashboard + REST `/api/move` + UART | **Verified (User Bench-Tested)** |
+| PIR human motion detection | Arduino Nano `D12` input → `$TEL` → ESP32 rising-edge trigger | **Verified (User Bench-Tested)** |
+| Ultrasonic distance measurement | HC-SR04 (`D10`/`D11`) with 25 ms echo timeout (`20–4000 mm`) | **Verified (User Bench-Tested)** |
+| Obstacle emergency motor stop | Real-time Nano 2-sample hysteresis (`≤20 cm`) blocks `FORWARD` | **Verified (User Bench-Tested)** |
+| Motion-triggered image capture | `CameraManager` acquires OV3660 frame on PIR rising edge | **Verified (User Bench-Tested)** |
+| Web image display & gallery | 6-slot PSRAM ring buffer (`/api/photo?id=...`) | **Verified (User Bench-Tested)** |
+| Distance associated with captures | Each captured photo stores & displays ultrasonic `distMm` | **Verified (User Bench-Tested)** |
+| Buzzer alert functionality | Non-blocking active/passive 5V buzzer driver (`Nano A0`) | **Verified (User Bench-Tested)** |
+| Telegram image notifications | Async Core-0 `WiFiClientSecure` `POST /sendPhoto` | **Verified (User Bench-Tested)** |
+| Mobile-friendly web dashboard | Responsive zero-CDN HTML5/CSS3/JS served from `PROGMEM` | **Verified (User Bench-Tested)** |
 
 *(Note: No AI object detection or face recognition is implemented; motion detection uses the hardware PIR sensor.)*
 

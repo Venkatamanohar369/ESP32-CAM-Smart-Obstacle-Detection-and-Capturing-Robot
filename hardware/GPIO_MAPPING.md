@@ -1,6 +1,6 @@
-# GPIO Mapping Reference — Option A (PROPOSED)
+# GPIO Mapping Reference — Option A (VERIFIED)
 
-> **Status:** **ALL EXTERNAL WIRING CONNECTIONS ARE `PROPOSED` UNTIL PHYSICALLY VERIFIED.**  
+> **Status:** **USER BENCH-VERIFIED (`2026-11-27`).**  
 > **Architecture:** AI-Thinker ESP32-CAM + Arduino Nano (`ATmega328P`, `5V / 16 MHz`) over `38400` bps UART (`Serial2` ↔ `AltSoftSerial`).
 
 ---
