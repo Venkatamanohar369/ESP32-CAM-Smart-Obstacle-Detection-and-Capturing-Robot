@@ -1,5 +1,5 @@
 BOARD: AI-Thinker ESP32-CAM
-
+ 
 CAMERA: OV3660
 
 PIR: Human motion detection
