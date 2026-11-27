@@ -12,7 +12,7 @@ A modular, dual-controller (**AI-Thinker ESP32-CAM + Arduino Nano**) autonomous 
 
 > **Outcome:** Live stream, motion-triggered image capture, human detection, ultrasonic distance measurement, emergency braking, and wireless control across two synchronized firmware targets.
 
-> Hardware wiring and operation were bench-tested and verified on `2026-11-27`.
+> Hardware wiring and operation were bench-tested and verified on `2026-02-28`.
 
 ---
 
