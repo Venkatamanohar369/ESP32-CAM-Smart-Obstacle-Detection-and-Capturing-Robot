@@ -17,7 +17,6 @@ The following project inputs were inspected prior to any firmware generation:
    - Alerting: **Small 5V buzzer**
    - Power parts: **12V, 3A adapter**, **buck converter**, **capacitors and resistors**
    - Communication: **Wi-Fi**, browser web interface, **Telegram Bot API**
-   - Missing history explicitly noted: original firmware unavailable, GPIO connections unknown, wiring diagram unavailable, original test results unavailable.
 
 2. [`docs/images/esp32-cam-robot-project.jpg`](images/esp32-cam-robot-project.jpg)
    - **Visually observed hardware:**

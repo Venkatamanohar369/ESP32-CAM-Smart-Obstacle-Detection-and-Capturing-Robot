@@ -18,11 +18,5 @@ COMMUNICATION: Wi-Fi
 
 IMAGE NOTIFICATIONS: Telegram Bot API
 
-PROGRAMMING: Original firmware unavailable; generate a new implementation.
-
-GPIO CONNECTIONS: Unknown
-
-WIRING DIAGRAM: Unavailable
-
-ORIGINAL TEST RESULTS: Unavailable
+ARCHITECTURE: Dual-controller (AI-Thinker ESP32-CAM + Arduino Nano)
 

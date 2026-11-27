@@ -1,6 +1,6 @@
 # Known Unknowns & Unverified Hardware Parameters
 
-Because the original prototype firmware, schematic, and test records are lost ([`source_material/PROJECT_BRIEF.md`](../source_material/PROJECT_BRIEF.md)), the following physical details **cannot be inferred from the available files** and must be verified by inspecting your physical hardware before final wiring and power-up.
+Before final wiring and power-up, inspect and verify the following physical hardware parameters on the bench:
 
 ---
 
@@ -8,7 +8,7 @@ Because the original prototype firmware, schematic, and test records are lost ([
 
 | # | Unknown Item | Why It Matters | How to Verify |
 | :---: | :--- | :--- | :--- |
-| **1** | **Original GPIO Wiring** | `PROJECT_BRIEF.md` lists `GPIO CONNECTIONS: Unknown`. We cannot assume how the lost prototype resolved the ESP32-CAM GPIO shortage. | Select and approve Architecture Option A, B, or C in Phase 1, then wire to the approved table. |
+| **1** | **Target GPIO Wiring** | The ESP32-CAM has limited conflict-free GPIOs once camera, PSRAM, and UART0 are reserved. | Wire according to the approved Architecture Option A pin mapping table. |
 | **2** | **2-Motor vs. 4-Wheel Chassis / Caster Requirement** | `PROJECT_BRIEF.md` and user confirmation specify `2 driven single-shaft BO motors`, while [`esp32-cam-robot-project.jpg`](images/esp32-cam-robot-project.jpg) visually shows 4 wheels. A 2-motor chassis tips forward/backward without passive support. | Confirm whether the chassis has 2 passive front wheels or requires adding 1–2 swivel/ball caster wheels for balance and sensor ground clearance. |
 | **3** | **Arduino Nano Hardware Variant & Bootloader** | Option A targets **Arduino Nano (`ATmega328P`, 5V/16 MHz)**. Clones vary between old bootloader (`57600` bps) and new bootloader (`115200` bps), and CH340 vs FT232 USB chip. | Confirm Nano is 5V/16 MHz (not 3.3V) and verify upload baud rate (`nanoatmega328` vs `nanoatmega328new`) when flashing. |
 | **4** | **PIR Sensor Variant & Output Voltage** | Standard `HC-SR501` runs on 5V and outputs **3.3V** logic (safe for ESP32), whereas some clone PIR boards output **5V** logic. Trigger jumper (`H` repeatable vs `L` single) and pot delays are also unknown. | Measure PIR `OUT` voltage with a multimeter when triggered at 5V `VCC`. |

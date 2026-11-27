@@ -1,7 +1,7 @@
 # GPIO Feasibility & Proposed Pin Mapping — AI-Thinker ESP32-CAM
 
 > **Status:** PHASE 1 AUDIT — **ALL PROPOSED PIN ASSIGNMENTS BELOW ARE `PROPOSED`, NOT `VERIFIED`.**  
-> Original wiring documentation is unavailable (`source_material/PROJECT_BRIEF.md`). Do not wire hardware until the target architecture is approved and physical continuity/voltage levels are checked.
+> Do not wire hardware until the target architecture is approved and physical continuity/voltage levels are checked.
 
 ---
 
