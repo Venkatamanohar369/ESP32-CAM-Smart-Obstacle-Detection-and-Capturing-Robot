@@ -1,0 +1,29 @@
+# Secrets & Local Configuration (NEVER COMMIT)
+config/config.h
+firmware/**/include/config.h
+*.secrets.h
+.env
+.env.*
+
+# PlatformIO Build & Local Tooling
+.pio/
+.pio-venv/
+.pio-core/
+.pioenvs/
+.piolibdeps/
+
+# Python / Test Artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# OS & IDE Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/.browse.c_cpp.db*
+.vscode/ipch/
+*.tmp
+*.log

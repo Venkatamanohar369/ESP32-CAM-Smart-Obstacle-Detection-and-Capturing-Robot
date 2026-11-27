@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-27",
+  "firmware_builds": {
+    "esp32cam": {
+      "status": "PASS",
+      "ram_bytes": 50712,
+      "ram_percent": 15.5,
+      "flash_bytes": 1015669,
+      "flash_percent": 32.3
+    },
+    "nanoatmega328": {
+      "status": "PASS",
+      "ram_bytes": 632,
+      "ram_percent": 30.9,
+      "flash_bytes": 8728,
+      "flash_percent": 28.4
+    }
+  },
+  "software_tests": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0
+  },
+  "physical_hardware_tests": "NOT_RUN"
+}
